@@ -37,7 +37,7 @@ class FlickrService {
                 URLQueryItem(name: "api_key", value: apiKey),
                 URLQueryItem(name: "tags", value: query),
                 URLQueryItem(name: "sort", value: "relevance"),
-                URLQueryItem(name: "perpage", value: "20"),
+                URLQueryItem(name: "per_page", value: "40"),
                 URLQueryItem(name: "format", value: "json"),
                 URLQueryItem(name: "nojsoncallback", value: "1"),
             ]

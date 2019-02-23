@@ -22,6 +22,7 @@ class ParkListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "National Parks Explorer"
         
         self.loadingIndicator.stopAnimating()
         self.loadingIndicator.isHidden = true

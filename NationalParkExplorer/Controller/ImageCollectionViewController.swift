@@ -20,6 +20,9 @@ class ImageCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        self.navigationItem.title = "Photos"
+        
         // get pictures for park, put in collection view
         flickrService.searchPhotos(query: park!.fullName,  completion: { ( photos: [FlickrPhoto]?, error: Error?) -> Void in
     

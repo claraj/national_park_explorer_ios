@@ -21,6 +21,8 @@ class ImageDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "Photo"
+        
         guard let photoData = flickrImage!.photo else { return }
         
         loadingIndicator.startAnimating()

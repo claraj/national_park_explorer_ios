@@ -18,33 +18,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wNj-3b-rDI">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="wNj-3b-rDI">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="National Parks Explorer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKb-PM-sRz">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="26.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a state" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKb-PM-sRz">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="29.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0nN-59-Duu">
-                                        <rect key="frame" x="0.0" y="26.5" width="375" height="216"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="375" id="149-Jd-1n9"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="29.5" width="375" height="239"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </pickerView>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMD-R6-C0p">
-                                        <rect key="frame" x="0.0" y="242.5" width="375" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMD-R6-C0p">
+                                        <rect key="frame" x="0.0" y="268.5" width="375" height="33"/>
                                         <state key="normal" title="Show Parks"/>
                                         <connections>
                                             <action selector="showParksButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FCE-fN-vgB"/>
                                         </connections>
                                     </button>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13z-2a-0s7">
-                                        <rect key="frame" x="0.0" y="272.5" width="375" height="300.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a park" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDT-0T-IGn">
+                                        <rect key="frame" x="0.0" y="301.5" width="375" height="29.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="13z-2a-0s7">
+                                        <rect key="frame" x="0.0" y="331" width="375" height="239"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FG6-9b-wxc">
-                                        <rect key="frame" x="0.0" y="573" width="375" height="30"/>
+                                        <rect key="frame" x="0.0" y="570" width="375" height="33"/>
                                         <state key="normal" title="Explore Park"/>
                                         <connections>
                                             <segue destination="hQB-Tn-ezo" kind="show" identifier="explorePark" id="Uel-Ug-nXw"/>
@@ -54,6 +59,7 @@
                             </stackView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="EPn-wm-qeg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -87,19 +93,19 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="IgQ-7E-DWG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lSK-rx-VNe">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="75" height="75"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UICollectionViewCell" id="ZdL-jc-5Tj" customClass="PhotoCell" customModule="NationalParkExplorer" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HIe-dN-X8W">
@@ -112,10 +118,10 @@
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="HIe-dN-X8W" secondAttribute="bottom" id="9On-5S-Fzs"/>
-                                    <constraint firstItem="HIe-dN-X8W" firstAttribute="leading" secondItem="ZdL-jc-5Tj" secondAttribute="leading" id="Ckj-Gc-bup"/>
-                                    <constraint firstAttribute="trailing" secondItem="HIe-dN-X8W" secondAttribute="trailing" id="RhL-BB-fbs"/>
-                                    <constraint firstItem="HIe-dN-X8W" firstAttribute="top" secondItem="ZdL-jc-5Tj" secondAttribute="top" id="zxz-7r-q89"/>
+                                    <constraint firstItem="HIe-dN-X8W" firstAttribute="top" secondItem="ZdL-jc-5Tj" secondAttribute="top" id="BNU-AN-Y2y"/>
+                                    <constraint firstAttribute="trailing" secondItem="HIe-dN-X8W" secondAttribute="trailing" id="BYp-9M-MAE"/>
+                                    <constraint firstAttribute="bottom" secondItem="HIe-dN-X8W" secondAttribute="bottom" id="Xbk-GP-2Y6"/>
+                                    <constraint firstItem="HIe-dN-X8W" firstAttribute="leading" secondItem="ZdL-jc-5Tj" secondAttribute="leading" id="sSH-Zl-XmI"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="image" destination="HIe-dN-X8W" id="6nX-Bb-Fqr"/>
@@ -141,40 +147,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="W4f-qQ-G2m">
-                                <rect key="frame" x="177" y="323" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="W4f-qQ-G2m">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                             </activityIndicatorView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8hP-mr-AeR">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="8hP-mr-AeR">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSi-wh-IVc">
-                                        <rect key="frame" x="166.5" y="0.0" width="42" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSi-wh-IVc">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Jlo-c0-urC"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="50" id="bTt-OJ-72G"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qgs-cu-4jD">
-                                        <rect key="frame" x="8" y="58" width="359" height="545"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qgs-cu-4jD">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="553"/>
                                     </imageView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="qgs-cu-4jD" firstAttribute="leading" secondItem="8hP-mr-AeR" secondAttribute="leading" constant="8" id="03Q-4m-DY5"/>
-                                    <constraint firstAttribute="bottom" secondItem="qgs-cu-4jD" secondAttribute="bottom" constant="8" id="QWp-Um-ceJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="qgs-cu-4jD" secondAttribute="trailing" constant="8" id="lTT-W2-ZDd"/>
-                                    <constraint firstItem="qgs-cu-4jD" firstAttribute="top" secondItem="YSi-wh-IVc" secondAttribute="bottom" constant="8" id="zAm-2g-NMf"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8hP-mr-AeR" firstAttribute="leading" secondItem="e1L-St-8ha" secondAttribute="leading" id="2t6-MX-EM6"/>
-                            <constraint firstItem="1WG-YN-bue" firstAttribute="trailing" secondItem="8hP-mr-AeR" secondAttribute="trailing" id="8GH-cr-to3"/>
-                            <constraint firstItem="1WG-YN-bue" firstAttribute="bottom" secondItem="8hP-mr-AeR" secondAttribute="bottom" id="ITe-Hk-0Hw"/>
-                            <constraint firstItem="8hP-mr-AeR" firstAttribute="top" secondItem="1WG-YN-bue" secondAttribute="top" id="Luf-K6-Yad"/>
+                            <constraint firstItem="W4f-qQ-G2m" firstAttribute="centerX" secondItem="e1L-St-8ha" secondAttribute="centerX" id="22W-su-0kP"/>
+                            <constraint firstItem="W4f-qQ-G2m" firstAttribute="centerY" secondItem="e1L-St-8ha" secondAttribute="centerY" id="Km6-Ml-igH"/>
+                            <constraint firstAttribute="trailing" secondItem="8hP-mr-AeR" secondAttribute="trailing" id="bO9-rB-8DJ"/>
+                            <constraint firstItem="8hP-mr-AeR" firstAttribute="leading" secondItem="e1L-St-8ha" secondAttribute="leading" id="n91-XQ-BH7"/>
+                            <constraint firstItem="8hP-mr-AeR" firstAttribute="bottom" secondItem="1WG-YN-bue" secondAttribute="bottom" id="o6s-Ci-daT"/>
+                            <constraint firstItem="8hP-mr-AeR" firstAttribute="top" secondItem="1WG-YN-bue" secondAttribute="top" id="uIQ-yP-R3I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1WG-YN-bue"/>
                     </view>
