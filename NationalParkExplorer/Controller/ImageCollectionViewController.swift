@@ -24,7 +24,7 @@ class ImageCollectionViewController: UICollectionViewController {
         self.navigationItem.title = "Photos"
         
         // get pictures for park, put in collection view
-        flickrService.searchPhotos(query: park!.fullName,  completion: { ( photos: [FlickrPhoto]?, error: Error?) -> Void in
+        flickrService.searchPhotos(query: park!.fullName)  { ( photos: [FlickrPhoto]?, error: Error?) -> Void in
     
              DispatchQueue.main.async {
            // self.activityIndicator.stopAnimating()
@@ -48,7 +48,7 @@ class ImageCollectionViewController: UICollectionViewController {
                     }
                 }
             }
-        })
+        }
     }
     
     

@@ -30,7 +30,7 @@ class ImageDetailViewController: UIViewController {
         photoDetails.text = photoData.title
         let url = flickrImage!.fullURL
         
-        flickrService.downloadImage(url: url!, completion: { (image: UIImage?, error: Error?) -> Void in
+        flickrService.downloadImage(url: url!) { (image: UIImage?, error: Error?) -> Void in
             
             DispatchQueue.main.async {
                 self.loadingIndicator.stopAnimating()
@@ -46,7 +46,7 @@ class ImageDetailViewController: UIViewController {
                     self.imageView.image = image
                 }
             }
-        })
+        }
     }
 }
 

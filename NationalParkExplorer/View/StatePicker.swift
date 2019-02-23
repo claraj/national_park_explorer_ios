@@ -6,8 +6,7 @@
 //  Copyright © 2019 clara. All rights reserved.
 //
 
-import  UIKit
-
+import UIKit
 
 class StatePicker: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
     
@@ -17,7 +16,6 @@ class StatePicker: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
         self.states = states
     }
     
-    // from data source
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -26,10 +24,7 @@ class StatePicker: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
         return states.count
     }
     
-    // from UIPickerViewDelegate
-    func pickerView(_ pickerView: UIPickerView,
-                    titleForRow row: Int,
-                    forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return states[row]
     }
     

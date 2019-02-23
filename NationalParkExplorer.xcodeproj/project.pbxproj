@@ -123,15 +123,15 @@
 		E743613A22208C1300967F69 /* NationalParkExplorer */ = {
 			isa = PBXGroup;
 			children = (
-				E74361772220D28600967F69 /* View */,
-				E74361762220D27A00967F69 /* Service */,
-				E74361752220D26F00967F69 /* Model */,
-				E74361732220D24200967F69 /* Controller */,
+				E743614722208C1800967F69 /* Info.plist */,
 				E743613B22208C1300967F69 /* AppDelegate.swift */,
-				E743613F22208C1300967F69 /* Main.storyboard */,
 				E743614222208C1800967F69 /* Assets.xcassets */,
 				E743614422208C1800967F69 /* LaunchScreen.storyboard */,
-				E743614722208C1800967F69 /* Info.plist */,
+				E743613F22208C1300967F69 /* Main.storyboard */,
+				E74361732220D24200967F69 /* Controller */,
+				E74361752220D26F00967F69 /* Model */,
+				E74361762220D27A00967F69 /* Service */,
+				E74361772220D28600967F69 /* View */,
 			);
 			path = NationalParkExplorer;
 			sourceTree = "<group>";
@@ -157,9 +157,9 @@
 		E74361732220D24200967F69 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E743613D22208C1300967F69 /* ParkListViewController.swift */,
 				E743616F2220D14500967F69 /* ImageCollectionViewController.swift */,
 				E74361712220D15500967F69 /* ImageDetailViewController.swift */,
+				E743613D22208C1300967F69 /* ParkListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,11 +167,11 @@
 		E74361752220D26F00967F69 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E743616D2220B91A00967F69 /* NationalPark.swift */,
-				E74361692220942F00967F69 /* States.swift */,
+				E74361842220E58D00967F69 /* FlickrImage.swift */,
 				E743617E2220D5B300967F69 /* FlickrPhoto.swift */,
 				E74361802220DA5600967F69 /* FlickrPhotoSet.swift */,
-				E74361842220E58D00967F69 /* FlickrImage.swift */,
+				E743616D2220B91A00967F69 /* NationalPark.swift */,
+				E74361692220942F00967F69 /* States.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,8 +179,8 @@
 		E74361762220D27A00967F69 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				E743616B2220B8F300967F69 /* NationalParksService.swift */,
 				E743617C2220D4D100967F69 /* FlickrService.swift */,
+				E743616B2220B8F300967F69 /* NationalParksService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -188,10 +188,10 @@
 		E74361772220D28600967F69 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E74361782220D2B600967F69 /* StatePicker.swift */,
+				E743618622219F8500967F69 /* ErrorAlertController.swift */,
 				E743617A2220D2CF00967F69 /* ParkPicker.swift */,
 				E74361822220DB4A00967F69 /* PhotoCell.swift */,
-				E743618622219F8500967F69 /* ErrorAlertController.swift */,
+				E74361782220D2B600967F69 /* StatePicker.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
