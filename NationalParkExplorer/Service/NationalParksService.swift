@@ -41,9 +41,12 @@ class NationalParksService {
             if let results = data {
                 let decoder = JSONDecoder()
                 print(data)
-                if let results = try? decoder.decode(NationalParkResult.self, from: results) {
+                
+                do {
+                    let results = try decoder.decode(NationalParkResult.self, from: results)
                     completion(results.data, nil)
-                } else {
+                } catch {
+                    print(error)  // Local error var, containing decoder error 
                     completion(nil, NationalParksServiceError.ResponseParsingError)
                 }
             }
