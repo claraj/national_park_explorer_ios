@@ -22,34 +22,36 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a state" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKb-PM-sRz">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="29.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0nN-59-Duu">
-                                        <rect key="frame" x="0.0" y="29.5" width="375" height="239"/>
+                                        <rect key="frame" x="0.0" y="27" width="375" height="222"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMD-R6-C0p">
-                                        <rect key="frame" x="0.0" y="268.5" width="375" height="33"/>
+                                        <rect key="frame" x="0.0" y="249" width="375" height="52.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <state key="normal" title="Show Parks"/>
                                         <connections>
                                             <action selector="showParksButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FCE-fN-vgB"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a park" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDT-0T-IGn">
-                                        <rect key="frame" x="0.0" y="301.5" width="375" height="29.5"/>
+                                        <rect key="frame" x="0.0" y="301.5" width="375" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="13z-2a-0s7">
-                                        <rect key="frame" x="0.0" y="331" width="375" height="239"/>
+                                        <rect key="frame" x="0.0" y="328.5" width="375" height="222"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FG6-9b-wxc">
-                                        <rect key="frame" x="0.0" y="570" width="375" height="33"/>
+                                        <rect key="frame" x="0.0" y="550.5" width="375" height="52.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <state key="normal" title="Explore Park"/>
                                         <connections>
                                             <segue destination="hQB-Tn-ezo" kind="show" identifier="explorePark" id="Uel-Ug-nXw"/>
