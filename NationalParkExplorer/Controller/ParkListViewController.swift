@@ -24,7 +24,6 @@ class ParkListViewController: UIViewController {
         self.navigationItem.title = "National Parks Explorer"
         
         self.loadingIndicator.stopAnimating()
-        self.loadingIndicator.isHidden = true
         
         statePicker = StatePicker(states: States.stateNames)
         statePickerView.dataSource = statePicker
@@ -47,15 +46,14 @@ class ParkListViewController: UIViewController {
     
     func getParks(for state: String) {
         
-        loadingIndicator.isHidden = false
         loadingIndicator.startAnimating()
         
         let service = NationalParksService()
         service.fetchParks(for: state) { (parks: [NationalPark]?, error: Error?) -> Void  in
             
             DispatchQueue.main.async {
+            
                 self.loadingIndicator.stopAnimating()
-                self.loadingIndicator.isHidden = true
                 
                 if let error = error {
                     print(error)
