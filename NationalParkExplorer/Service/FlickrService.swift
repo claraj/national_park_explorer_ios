@@ -16,35 +16,17 @@ enum FlickrServiceError: Error {
     case ImageDownloadFailed
 }
 
-
 class FlickrService {
     
     // flickr's dev key, replace with real version
     let apiKey = "c213e2d6cc8ee75c8ff471cbf955ac40"
     
-    func searchPhotos(query: String, completion: @escaping ([FlickrPhoto]?, Error?) -> Void ) {
+    func searchPhotos(query: String, completion: @escaping ([FlickrPhotoData]?, Error?) -> Void ) {
         
         // example
         // https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=6ca54d834c43949de7b3c9c742e4430e&tags=arches+national+park&format=json&nojsoncallback=1
         
-        let components: URLComponents = {
-            var components = URLComponents()
-            components.scheme = "https"
-            components.host = "api.flickr.com"
-            components.path = "/services/rest"
-            components.queryItems = [
-                URLQueryItem(name: "method", value: "flickr.photos.search"),
-                URLQueryItem(name: "api_key", value: apiKey),
-                URLQueryItem(name: "tags", value: query),
-                URLQueryItem(name: "sort", value: "relevance"),
-                URLQueryItem(name: "per_page", value: "40"),
-                URLQueryItem(name: "format", value: "json"),
-                URLQueryItem(name: "nojsoncallback", value: "1"),
-            ]
-            return components
-        }()
-        
-        let url = components.url
+        let url = buildSearchURL(query: query)
         
         let session = URLSession.shared
         let task = session.dataTask(with: url!) { data, response, error in
@@ -67,6 +49,28 @@ class FlickrService {
             
         }
         task.resume()
+    }
+    
+    func buildSearchURL(query: String) -> URL? {
+        let components: URLComponents = {
+            var components = URLComponents()
+            components.scheme = "https"
+            components.host = "api.flickr.com"
+            components.path = "/services/rest"
+            components.queryItems = [
+                URLQueryItem(name: "method", value: "flickr.photos.search"),
+                URLQueryItem(name: "api_key", value: apiKey),
+                URLQueryItem(name: "tags", value: query),
+                URLQueryItem(name: "sort", value: "relevance"),
+                URLQueryItem(name: "per_page", value: "40"),
+                URLQueryItem(name: "format", value: "json"),
+                URLQueryItem(name: "nojsoncallback", value: "1"),
+            ]
+            return components
+        }()
+        
+        let url = components.url
+        return url
     }
     
     

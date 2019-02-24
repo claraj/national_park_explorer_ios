@@ -10,26 +10,21 @@ import UIKit
 
 class FlickrPhotoSet {
     
-    var photos: [FlickrPhoto]  // made from JSON data from server
-    var images: [FlickrImage]   // wrap UIImage objects for display
+    var photoData: [FlickrPhotoData]  // made from JSON data from server
+    var images: [FlickrImage]   // Image contains a UIImage and a wrap UIImage objects for display
     
-    init(photos: [FlickrPhoto]) {
-        self.photos = photos
-        
-        self.images = []
-        for p in photos {
-            let img = FlickrImage(photo: p)
-            self.images.append(img)
-        }
+    let flickrService = FlickrService()
+    
+    init(photoData: [FlickrPhotoData]) {
+        self.photoData = photoData
+        self.images = self.photoData.map( { FlickrImage(photoData: $0) } )
     }
     
     func downloadThumbnailFor(index: Int, completion: @escaping (UIImage?, Error?) -> Void) {
-        
-        let flickrService = FlickrService()
         let image = images[index]
         flickrService.downloadImage(url: image.thumbnailURL!, completion: { (image: UIImage?, error: Error?) in
             self.images[index].thumbnail = image
-            completion(image, nil)
+            completion(image, error)
         })
     }
     
@@ -37,9 +32,9 @@ class FlickrPhotoSet {
         return images.count
     }
     
-    
-    func photoAt(index: Int) -> FlickrPhoto? {
-        return photos[index]
+    func photoAt(index: Int) -> FlickrPhotoData? {
+        return photoData[index]
     }
-    
 }
+
+

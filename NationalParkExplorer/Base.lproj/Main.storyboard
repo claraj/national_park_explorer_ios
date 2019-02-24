@@ -127,7 +127,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="image" destination="HIe-dN-X8W" id="6nX-Bb-Fqr"/>
-                                    <segue destination="2gF-V3-7Iy" kind="show" identifier="parkDetail" id="11d-FM-pfd"/>
+                                    <segue destination="2gF-V3-7Iy" kind="show" identifier="photoDetail" id="11d-FM-pfd"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -156,7 +156,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSi-wh-IVc">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="51.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="50" id="bTt-OJ-72G"/>
                                         </constraints>
@@ -165,7 +165,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qgs-cu-4jD">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="553"/>
+                                        <rect key="frame" x="0.0" y="51.5" width="375" height="551.5"/>
                                     </imageView>
                                 </subviews>
                             </stackView>

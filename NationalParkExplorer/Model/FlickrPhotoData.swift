@@ -14,10 +14,10 @@ struct FlickrResponse: Decodable {
 }
 
 struct FlickrPhotoResponse: Decodable {
-    let photo: [FlickrPhoto]
+    let photo: [FlickrPhotoData]
 }
 
-struct FlickrPhoto: Decodable {
+struct FlickrPhotoData: Decodable {
     let id: String
     let owner: String
     let secret: String

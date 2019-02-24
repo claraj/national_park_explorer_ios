@@ -23,26 +23,23 @@ class ImageDetailViewController: UIViewController {
         
         self.navigationItem.title = "Photo"
         
-        guard let photoData = flickrImage!.photo else { return }
+        let photoData = flickrImage!.photoData
         
         loadingIndicator.startAnimating()
         
-        photoDetails.text = photoData.title
+        photoDetails.text = photoData!.title
         let url = flickrImage!.fullURL
         
         flickrService.downloadImage(url: url!) { (image: UIImage?, error: Error?) -> Void in
             
             DispatchQueue.main.async {
                 self.loadingIndicator.stopAnimating()
-            }
-            
-            if let error = error {
-                print(error)
-                self.present(ErrorAlertController.alert(message: "Error fetching photo"), animated: true)
-            }
                 
-            else {
-                DispatchQueue.main.async {
+                if let error = error {
+                    print(error)
+                    self.present(ErrorAlertController.alert(message: "Error fetching photo"), animated: true)
+                }
+                else {
                     self.imageView.image = image
                 }
             }
