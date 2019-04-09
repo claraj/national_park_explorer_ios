@@ -19,7 +19,8 @@ enum FlickrServiceError: Error {
 class FlickrService {
     
     // flickr's dev key, replace with real version
-    let apiKey = "c213e2d6cc8ee75c8ff471cbf955ac40"
+    //let apiKey = "c213e2d6cc8ee75c8ff471cbf955ac40"
+    let apiKey = "a6d819499131071f158fd740860a5a88"
     
     func searchPhotos(query: String, completion: @escaping ([FlickrPhotoData]?, Error?) -> Void ) {
         

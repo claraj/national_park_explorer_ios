@@ -10,7 +10,7 @@ import Foundation
 
 
 struct NationalParkResult: Decodable {
-    let total: Int
+    let total: String
     let data: [NationalPark]
 }
 
